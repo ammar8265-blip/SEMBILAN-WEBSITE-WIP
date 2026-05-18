@@ -52,8 +52,8 @@ export const Hero = () => {
     offset: ["start start", "end start"]
   });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
-  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
+  const contentY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
 
   return (
     <section 
@@ -66,7 +66,7 @@ export const Hero = () => {
           style={{ y: backgroundY }}
           src="/hero-bg.jpg" 
           alt="SEMBILAN Hero Background" 
-          className="w-full h-[150%] object-cover opacity-90 absolute top-[-25%] left-0"
+          className="w-full h-[130%] object-cover opacity-90 absolute top-[-15%] left-0"
           onError={(e) => {
              // Fallback to a high-quality KL night shot if hero-bg.jpg isn't uploaded yet
              e.currentTarget.src = "https://images.unsplash.com/photo-1595153322477-4fd581aee00c?auto=format&fit=crop&q=80&w=2000";
